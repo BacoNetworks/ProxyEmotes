@@ -2,3 +2,4 @@ name: Proxyemotes
 version: @version@
 main: me.firedhydra.proxyemotes.Proxyemotes
 description: Ascii emotes for the proxy server
+author: FiredHydra
