@@ -14,7 +14,7 @@ public class ShrugCommand extends Command {
 
     @Override
     public void execute(CommandSender sender, String[] args) {
-        if (sender.hasPermission("proxyemote.shrug")) {
+        if (sender.hasPermission("proxyemote.shrug") || sender.hasPermission("proxyemote.*")) {
             ProxyServer.getInstance().getPlayer(sender.getName()).chat("\u00AF\\\u005F\u0028\u30C4\u0029\u005F\u002F\u00AF");
         } else {
             sender.sendMessage(new TextComponent(ChatColor.RED + "You do not have permission to run this command!"));

@@ -14,7 +14,7 @@ public class DisapproveCommand extends Command {
 
     @Override
     public void execute(CommandSender sender, String[] args) {
-        if (sender.hasPermission("proxyemote.disapprove")) {
+        if (sender.hasPermission("proxyemote.disapprove") || sender.hasPermission("proxyemote.*")) {
             ProxyServer.getInstance().getPlayer(sender.getName()).chat("\u0CA0\u005F\u0CA0");
         } else {
             sender.sendMessage(new TextComponent(ChatColor.RED + "You do not have permission to run this command!"));

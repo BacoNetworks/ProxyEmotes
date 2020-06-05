@@ -14,7 +14,7 @@ public class AngryCommand extends Command{
 
     @Override
     public void execute(CommandSender sender, String[] args) {
-        if (sender.hasPermission("proxyemote.angry")) {
+        if (sender.hasPermission("proxyemote.angry") || sender.hasPermission("proxyemote.*")) {
             ProxyServer.getInstance().getPlayer(sender.getName()).chat("\u0028\u256C \u0CA0\u76CA\u0CA0\u0029");
         } else {
             sender.sendMessage(new TextComponent(ChatColor.RED + "You do not have permission to run this command!"));

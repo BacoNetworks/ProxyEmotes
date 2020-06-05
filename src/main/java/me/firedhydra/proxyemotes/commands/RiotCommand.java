@@ -14,7 +14,7 @@ public class RiotCommand extends Command {
 
     @Override
     public void execute(CommandSender sender, String[] args) {
-        if (sender.hasPermission("proxyemote.riot")) {
+        if (sender.hasPermission("proxyemote.riot") || sender.hasPermission("proxyemote.*")) {
             ProxyServer.getInstance().getPlayer(sender.getName()).chat("\u0B67\u0F3C\u0CA0\u76CA\u0CA0\u0F3D\u0B68");
         } else {
             sender.sendMessage(new TextComponent(ChatColor.RED + "You do not have permission to run this command!"));

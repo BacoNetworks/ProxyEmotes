@@ -14,7 +14,7 @@ public class AmenoCommand extends Command{
 
     @Override
     public void execute(CommandSender sender, String[] args) {
-        if (sender.hasPermission("proxyemote.ameno")) {
+        if (sender.hasPermission("proxyemote.ameno") || sender.hasPermission("proxyemote.*")) {
             ProxyServer.getInstance().getPlayer(sender.getName()).chat("\u0F3C \u3064 \u25D5\u005F\u25D5 \u0F3D\u3064");
         } else {
             sender.sendMessage(new TextComponent(ChatColor.RED + "You do not have permission to run this command!"));
